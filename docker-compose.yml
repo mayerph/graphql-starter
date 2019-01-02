@@ -1,0 +1,15 @@
+version: '2'
+services:
+    web:
+        image: terraform.cs.hm.edu:5043/mayerph-grapqhl-server-starter:master
+        ports:
+            - '8000:8000'
+        depends_on:
+            - mongo
+    mongo:
+        image: mongo
+        ports:
+            - '27017:27017'
+        volumes:
+            - ./data:/data/db
+
