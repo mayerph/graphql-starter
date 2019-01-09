@@ -1,7 +1,6 @@
-version: '3'
+version: '2'
 services:
     frontend:
-        container_name: frontend
         env_file:
             - testing.env
         image: terraform.cs.hm.edu:5043/mayerph-graphql-client-starter:master
@@ -9,28 +8,19 @@ services:
             - '8080:80'
         depends_on:
             - backend
-        networks:
-            - be
     backend:
-        container_name: terraform.cs.hm.edu:5043/mayerph-grapqhl-server-starter:master
         env_file:
             - testing.env
-        image: wasser
+        image: terraform.cs.hm.edu:5043/mayerph-grapqhl-server-starter:master
         ports:
             - '8000:8000'
         depends_on:
             - mongo
-        networks:
-            - be
-            - db
-            
-            
     mongo:
         image: mongo
-        networks:
-            - db
+        ports:
+            - '27017:27017'
         volumes:
             - ./data:/data/db
-networks:
-    be:
-    db:
+
+    
