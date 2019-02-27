@@ -12,10 +12,10 @@ services:
         networks:
             - be
     backend:
-        container_name: terraform.cs.hm.edu:5043/mayerph-grapqhl-server-starter:master
+        container_name: backend
         env_file:
             - testing.env
-        image: wasser
+        image: terraform.cs.hm.edu:5043/mayerph-grapqhl-server-starter:master
         ports:
             - '8000:8000'
         depends_on:
