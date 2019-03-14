@@ -26,10 +26,14 @@ docker-compose up
 http://localhost:8080/
 ```
 
+![frontend_1](../assets/frontend_1.png?raw=true)
+
 - Serve the apollo playground</br>(For a detailed description working with apollo in the context of this project click [here](https://github.com/mayerph/grapqhl-server-starter#operations))
 ```
 http://localhost:8000/graphql
 ```
+![apollo_playground_1](../assets/apollo_playground_1.png?raw=true)
+
 
 
 # Credentials
