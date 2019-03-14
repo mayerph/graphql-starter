@@ -50,7 +50,7 @@ For a detailed description click [here](https://github.com/mayerph/grapqhl-serve
 ## MongoDB
 [Offical website](https://www.mongodb.com/what-is-mongodb)
 
-# Further possibilities
+# Further informations
 ## docker-compose up
 - Starting the complete environment
 ```
